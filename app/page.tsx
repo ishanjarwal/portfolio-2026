@@ -22,7 +22,7 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-background/10 backdrop-blur-[1px]" />
+        <div className="absolute inset-0" />
       </div>
 
       <Hero />
