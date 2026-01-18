@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-
 import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -23,12 +22,9 @@ const socialLinks = [
     },
 ]
 
-export function Hero() {
+const Hero = () => {
     return (
         <section id="home" className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
-            {/* Background Image */}
-            {/* Background Image removed for video wallpaper support at page level */}
-
             {/* Content */}
             <div className="z-10 flex flex-col items-center gap-6 text-center animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-10">
                 <h1 className="font-heading text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 drop-shadow-sm">
@@ -67,3 +63,5 @@ export function Hero() {
         </section>
     )
 }
+
+export default Hero
