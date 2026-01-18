@@ -15,14 +15,13 @@ const navLinks = [
 
 export function Navbar() {
     return (
-        <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
-            <nav className="flex items-center justify-between rounded-full border border-border/40 bg-background/80 px-6 py-2 shadow-lg backdrop-blur-md transition-all hover:border-border/80 w-full max-w-5xl">
-                <div className="hidden md:flex">
-                    {/* Optional Logo or Branding on the left logic can go here, leaving empty for centered focus or just simplified */}
-                    <span className="font-heading font-bold text-xl">Portfolio</span>
+        <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-2">
+            <nav className="flex items-center justify-between gap-4 rounded-full border border-border/40 bg-background/80 px-4 py-1.5 shadow-lg backdrop-blur-md transition-all hover:border-border/80 w-fit">
+                <div className="hidden md:flex items-center mr-2">
+                    <span className="font-heading font-bold text-lg">Portfolio</span>
                 </div>
 
-                <ul className="flex items-center gap-6">
+                <ul className="flex items-center gap-4">
                     {navLinks.map((link) => (
                         <li key={link.label}>
                             <Link
@@ -35,8 +34,8 @@ export function Navbar() {
                     ))}
                 </ul>
 
-                <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm" asChild>
+                <div className="flex items-center gap-1 ml-2">
+                    <Button variant="default" size="sm" className="rounded-full px-4" asChild>
                         <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                             Resume
                         </Link>

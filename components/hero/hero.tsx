@@ -43,13 +43,13 @@ export function Hero() {
                 <h1 className="font-heading text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 drop-shadow-sm">
                     John Doe
                 </h1>
-                <p className="max-w-[42rem] px-4 font-sans text-lg text-muted-foreground sm:text-xl md:text-2xl leading-relaxed">
+                <p className="max-w-[42rem] px-4 font-sans text-base text-muted-foreground sm:text-lg md:text-xl leading-relaxed">
                     Full Stack Developer crafting sleek & performant digital experiences.
                     <br className="hidden sm:inline" /> Specializing in Next.js, React, and Modern Web UI.
                 </p>
 
                 <div className="mt-4">
-                    <Button asChild size="lg" className="rounded-full px-8 text-lg h-12">
+                    <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base h-12 border-muted-foreground/20 bg-background/50 hover:bg-background/80 backdrop-blur-sm">
                         <Link href="#contact">
                             Get in Touch
                         </Link>
@@ -58,7 +58,7 @@ export function Hero() {
             </div>
 
             {/* Social Links Sidebar */}
-            <div className="absolute bottom-12 left-8 md:left-12 z-20 hidden md:flex flex-col gap-6 animate-in slide-in-from-left duration-1000 delay-300 fill-mode-forwards opacity-0">
+            <div className="absolute bottom-12 left-8 md:left-12 z-20 hidden md:flex flex-col gap-6">
                 <div className="h-24 w-[1px] bg-border mx-auto mb-2" />
                 {socialLinks.map((social) => (
                     <Link
