@@ -41,7 +41,7 @@ export function Hero() {
             {/* Content */}
             <div className="z-10 flex flex-col items-center gap-6 text-center animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-10">
                 <h1 className="font-heading text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 drop-shadow-sm">
-                    John Doe
+                    Ishan Jarwal
                 </h1>
                 <p className="max-w-[42rem] px-4 font-sans text-base text-muted-foreground sm:text-lg md:text-xl leading-relaxed">
                     Full Stack Developer crafting sleek & performant digital experiences.
