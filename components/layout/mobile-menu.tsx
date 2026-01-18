@@ -6,6 +6,7 @@ import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GLASS_EFFECTS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface MobileMenuProps {
     isOpen: boolean;
@@ -13,67 +14,110 @@ interface MobileMenuProps {
     links: { label: string; href: string }[];
 }
 
+const menuVariants = {
+    closed: {
+        x: "100%",
+        transition: {
+            duration: 0.5,
+            ease: [0.76, 0, 0.24, 1], // Cubic bezier for smooth exit
+        },
+    },
+    open: {
+        x: "0%",
+        transition: {
+            duration: 0.5,
+            ease: [0.76, 0, 0.24, 1], // Cubic bezier for smooth entrance
+            staggerChildren: 0.1,    // Stagger effect for children
+            delayChildren: 0.2,      // Wait a bit before starting items
+        },
+    },
+};
+
+const itemVariants = {
+    closed: {
+        x: 80,
+        opacity: 0,
+        transition: {
+            duration: 0.5,
+            ease: [0.76, 0, 0.24, 1],
+        },
+    },
+    open: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            ease: [0.76, 0, 0.24, 1],
+        },
+    },
+};
+
+const backdropVariants = {
+    closed: {
+        opacity: 0,
+        transition: { duration: 0.3 },
+    },
+    open: {
+        opacity: 1,
+        transition: { duration: 0.3 },
+    },
+};
+
 export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
-    const [shouldRender, setShouldRender] = React.useState(isOpen);
-
-    React.useEffect(() => {
-        if (isOpen) {
-            setShouldRender(true);
-        } else {
-            const timer = setTimeout(() => setShouldRender(false), 500); // Wait for animation
-            return () => clearTimeout(timer);
-        }
-    }, [isOpen]);
-
-    if (!shouldRender) return null;
-
     return (
-        <div
-            className={cn(
-                "fixed inset-0 z-[100] flex justify-end md:hidden transition-opacity duration-300",
-                isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-            )}
-        >
-            {/* Backdrop */}
-            <div
-                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-                onClick={onClose}
-            />
+        <AnimatePresence mode="wait">
+            {isOpen && (
+                <div className="fixed inset-0 z-[100] md:hidden">
+                    {/* Backdrop */}
+                    <motion.div
+                        key="backdrop"
+                        variants={backdropVariants}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                        onClick={onClose}
+                    />
 
-            {/* Menu Panel */}
-            <div
-                className={cn(
-                    "relative h-full w-full max-w-sm flex flex-col p-8 pt-20 transition-transform duration-500 ease-in-out",
-                    GLASS_EFFECTS,
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                )}
-            >
-                <Button
-                    variant="ghost"
-                    size="icon"
-                    className="absolute top-6 right-6 rounded-full hover:bg-white/10"
-                    onClick={onClose}
-                >
-                    <X className="h-6 w-6" />
-                </Button>
-
-                <nav className="flex flex-col gap-8 mt-12">
-                    {links.map((link, index) => (
-                        <Link
-                            key={link.label}
-                            href={link.href}
-                            onClick={onClose}
+                    {/* Menu Panel - Wrapped in a flex container to align right */}
+                    <div className="absolute inset-0 flex justify-end pointer-events-none">
+                        <motion.div
+                            key="menu"
+                            variants={menuVariants}
+                            initial="closed"
+                            animate="open"
+                            exit="closed"
                             className={cn(
-                                "text-4xl font-bold uppercase tracking-widest text-foreground hover:text-primary transition-all duration-500 transform translate-x-10 opacity-0",
-                                isOpen && "translate-x-0 opacity-100"
+                                "relative h-full w-full max-w-sm flex flex-col p-8 pt-20 pointer-events-auto",
+                                GLASS_EFFECTS
                             )}
-                            style={{ transitionDelay: `${100 + index * 100}ms` }}
                         >
-                            {link.label}
-                        </Link>
-                    ))}
-                </nav>
-            </div>
-        </div>
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                className="absolute top-6 right-6 rounded-full hover:bg-white/10"
+                                onClick={onClose}
+                            >
+                                <X className="h-6 w-6" />
+                            </Button>
+
+                            <nav className="flex flex-col gap-8 mt-12">
+                                {links.map((link) => (
+                                    <motion.div key={link.label} variants={itemVariants}>
+                                        <Link
+                                            href={link.href}
+                                            onClick={onClose}
+                                            className="text-4xl font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors block"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    </motion.div>
+                                ))}
+                            </nav>
+                        </motion.div>
+                    </div>
+                </div>
+            )}
+        </AnimatePresence>
     );
 }
