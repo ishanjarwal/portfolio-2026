@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
+
 import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -27,16 +27,7 @@ export function Hero() {
     return (
         <section id="home" className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
             {/* Background Image */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/hero_bg.png"
-                    alt="Abstract Background"
-                    fill
-                    priority
-                    className="object-cover opacity-90 dark:opacity-60"
-                />
-                <div className="absolute inset-0 bg-background/30 dark:bg-black/40 backdrop-blur-[2px]" />
-            </div>
+            {/* Background Image removed for video wallpaper support at page level */}
 
             {/* Content */}
             <div className="z-10 flex flex-col items-center gap-6 text-center animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-10">
