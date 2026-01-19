@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import {
-  ArrowBigRight,
   Github,
   Linkedin,
   Mail,
