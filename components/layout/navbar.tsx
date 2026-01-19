@@ -12,7 +12,7 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Education", href: "#education" },
+  { label: "Blog", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -29,10 +29,16 @@ export function Navbar() {
       <div className="fixed top-4 left-0 right-0 z-50 flex justify-center py-2 sm:px-2 not-sm:px-4">
         <nav
           className={cn(
-            "group flex items-center justify-between gap-4 rounded-full  p-2 ps-6 transition-all md:w-fit w-full",
+            "group flex items-center justify-between gap-8 rounded-full  p-2 ps-6 transition-all md:w-fit w-full",
             GLASS_EFFECTS,
           )}
         >
+          <div className="">
+            <span className="font-heading font-bold text-lg pl-2">
+              Ishan Jarwal
+            </span>
+          </div>
+
           <ul className="items-center gap-4 group-hover:gap-8 duration-300 md:flex hidden">
             {navLinks.map((link) => (
               <li key={link.label}>
@@ -45,12 +51,6 @@ export function Navbar() {
               </li>
             ))}
           </ul>
-
-          <div className="md:hidden">
-            <span className="font-heading font-bold text-lg pl-2">
-              Ishan Jarwal
-            </span>
-          </div>
 
           <div className="flex items-center gap-1 ml-2">
             <Button
