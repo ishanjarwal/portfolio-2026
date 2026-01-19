@@ -23,8 +23,8 @@ const BentoCard = ({
 }: BentoCardProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true, amount: 0.3 }}
       className={cn(
@@ -64,8 +64,8 @@ const About = () => {
       <div className="max-w-6xl w-full mx-auto space-y-12">
         <div className="text-center space-y-4">
           <motion.div
-            initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="relative flex items-center justify-center"
           >
@@ -77,8 +77,8 @@ const About = () => {
             </span>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, filter: "blur(5px)" }}
-            whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="h-1.5 w-24 bg-primary mx-auto rounded-full"
           />

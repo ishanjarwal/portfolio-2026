@@ -45,8 +45,8 @@ const Hero = () => {
     >
       {/* Content */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
-        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={cn(
           "z-10 flex flex-col items-center gap-6 text-center p-8 rounded-xl max-w-4xl w-full mt-16",
@@ -54,8 +54,8 @@ const Hero = () => {
         )}
       >
         <motion.div
-          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="w-24 aspect-square"
         >
@@ -68,16 +68,16 @@ const Hero = () => {
           />
         </motion.div>
         <motion.h1
-          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/70 leading-normal"
         >
           Ishan Jarwal
         </motion.h1>
         <motion.div
-          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           className="flex justify-center items-center gap-1 flex-wrap"
         >
@@ -107,8 +107,8 @@ const Hero = () => {
           </Badge>
         </motion.div>
         <motion.p
-          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           className="max-w-2xl px-4 font-sans text-foreground text-sm md:text-lg "
         >
@@ -120,8 +120,8 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
           className="mt-4"
         >
@@ -146,8 +146,8 @@ const Hero = () => {
 
       {/* Social Links Sidebar */}
       <motion.div
-        initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
-        animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
         className="absolute bottom-12 left-8 md:left-12 z-20 hidden md:flex flex-col gap-6"
       >
