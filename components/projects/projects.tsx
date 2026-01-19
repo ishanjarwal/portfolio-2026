@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { GLASS_EFFECTS, projects } from "@/lib/constants";
 import { motion } from "framer-motion";
-import { Code, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -45,7 +45,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 </span>
               </Badge>
               {project.type.map((type) => (
-                <div className="md:hidden px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100 w-fit">
+                <div key={type} className="md:hidden px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100 w-fit">
                   {type}
                 </div>
               ))}
@@ -54,7 +54,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         </div>
         <div className="not-md:hidden flex flex-wrap justify-end items-center gap-1">
           {project.type.map((type) => (
-            <div className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100">
+            <div key={type} className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100">
               {type}
             </div>
           ))}
