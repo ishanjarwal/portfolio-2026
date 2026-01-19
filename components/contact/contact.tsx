@@ -46,7 +46,7 @@ const ContactInfoCard = ({
         <p className="text-sm font-medium text-foreground/50 uppercase tracking-wider">
           {title}
         </p>
-        <p className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+        <p className="md:text-lg text-sm text-wrap font-bold text-foreground group-hover:text-primary transition-colors">
           {content}
         </p>
       </div>
@@ -101,10 +101,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="min-h-screen py-24 px-4 flex items-center justify-center"
-    >
+    <section className="min-h-screen py-24 px-4 flex items-center justify-center">
       <div className="max-w-7xl w-full mx-auto space-y-16">
         {/* Heading Pattern */}
         <div className="text-center space-y-4">
@@ -187,7 +184,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side: Contact Form */}
-          <div className="lg:col-span-7">
+          <div id="contact" className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
