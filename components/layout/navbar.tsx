@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ExternalLink, TextAlignJustify } from "lucide-react";
-import { GLASS_SHADOWS } from "@/lib/constants";
+import { GLASS_EFFECTS } from "@/lib/constants";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 
 const navLinks = [
@@ -21,12 +21,16 @@ export function Navbar() {
 
   return (
     <>
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} links={navLinks} />
-      <div className="fixed top-4 left-0 right-0 z-50 flex justify-center p-2">
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        links={navLinks}
+      />
+      <div className="fixed top-4 left-0 right-0 z-50 flex justify-center py-2 sm:px-2 not-sm:px-4">
         <nav
           className={cn(
             "group flex items-center justify-between gap-4 rounded-full  p-2 ps-6 transition-all md:w-fit w-full",
-            GLASS_SHADOWS,
+            GLASS_EFFECTS,
           )}
         >
           <ul className="items-center gap-4 group-hover:gap-8 duration-300 md:flex hidden">
@@ -43,7 +47,9 @@ export function Navbar() {
           </ul>
 
           <div className="md:hidden">
-            <span className="font-heading font-bold text-lg pl-2">Ishan Jarwal</span>
+            <span className="font-heading font-bold text-lg pl-2">
+              Ishan Jarwal
+            </span>
           </div>
 
           <div className="flex items-center gap-1 ml-2">
@@ -53,7 +59,11 @@ export function Navbar() {
               className="rounded-full px-4"
               asChild
             >
-              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Resume
                 <ExternalLink className="ml-1 h-3 w-3" />
               </Link>

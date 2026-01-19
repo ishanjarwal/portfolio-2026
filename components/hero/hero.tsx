@@ -1,11 +1,20 @@
 "use client";
 
-import { GLASS_SHADOWS } from "@/lib/constants";
-import { cn } from "@/lib/utils";
-import { Github, Linkedin, Mail, MoveRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import {
+  ArrowBigRight,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  MoveRight,
+  Phone,
+} from "lucide-react";
 import { Button } from "../ui/button";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { GLASS_EFFECTS } from "@/lib/constants";
+import { Badge } from "../ui/badge";
 
 const socialLinks = [
   {
@@ -32,10 +41,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden not-sm:p-4"
     >
       {/* Content */}
-      <div className="z-10 flex flex-col items-center gap-6 text-center bg-">
+      <div
+        className={cn(
+          "z-10 flex flex-col items-center gap-6 text-center p-8 rounded-xl max-w-4xl w-full mt-16",
+          GLASS_EFFECTS,
+        )}
+      >
         <div className="w-24 aspect-square">
           <Image
             src={profile_image}
@@ -48,6 +62,32 @@ const Hero = () => {
         <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/70 leading-normal">
           Ishan Jarwal
         </h1>
+        <div className="flex justify-center items-center gap-1 flex-wrap">
+          <Badge variant={"default"} className="p-1 px-2 bg-background/25">
+            <MapPin />
+            Jaipur, India
+          </Badge>
+          <Badge
+            variant={"default"}
+            className="p-1 px-2 bg-background/25"
+            asChild
+          >
+            <Link href={"mailto:ishan.professional01@gmail.com"}>
+              <Mail />
+              ishan.professional01@gmail.com
+            </Link>
+          </Badge>
+          <Badge
+            variant={"default"}
+            className="p-1 px-2 bg-background/25"
+            asChild
+          >
+            <Link href={"tel:+91 9116080979"}>
+              <Phone />
+              +91 9116080979
+            </Link>
+          </Badge>
+        </div>
         <p className="max-w-2xl px-4 font-sans text-foreground text-sm md:text-lg ">
           Hi, I’m Ishan, a passionate <b>Software Developer</b> based in Jaipur
           with experience in building <b>user centric</b>, <b>dynamic</b> and{" "}
@@ -63,7 +103,7 @@ const Hero = () => {
             size="lg"
             className={cn(
               "group rounded-full px-8 text-base h-12 hover:bg-background/80 backdrop-blur-sm gap-0 relative hover:pe-12",
-              GLASS_SHADOWS,
+              GLASS_EFFECTS,
             )}
           >
             <Link href="#contact">
