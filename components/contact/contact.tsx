@@ -143,8 +143,8 @@ const Contact = () => {
               <ContactInfoCard
                 icon={Mail}
                 title="Email"
-                content="ishan.professional01@gmail.com"
-                href="mailto:ishan.professional01@gmail.com"
+                content="ishucodes@gmail.com"
+                href="mailto:ishucodes@gmail.com"
               />
               <ContactInfoCard
                 icon={Phone}

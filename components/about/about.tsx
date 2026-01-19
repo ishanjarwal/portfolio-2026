@@ -100,27 +100,27 @@ const About = () => {
                 Skilled in TypeScript and Next.js for full-stack application
                 development, with a fundamental understanding of Linux
                 environments.
-                <br />
-                <br />
-                <ul className="list-disc ms-4">
-                  <li>
-                    Passionate about building efficient, real-world systems
-                    using REST APIs and RPC with modern web & AI technologies
-                  </li>
-                  <li>
-                    Strong grasp of system design principles and performance
-                    optimization
-                  </li>
-                  <li>
-                    Experience working across the stack with a focus on clean,
-                    maintainable code
-                  </li>
-                  <li>
-                    Actively exploring advancements in Generative AI, including
-                    tools like LangChain and LangGraph.
-                  </li>
-                </ul>
               </p>
+              <br />
+              <br />
+              <ul className="list-disc ms-4 text-foreground/75 text-sm md:text-lg text-md leading-relaxed grow">
+                <li>
+                  Passionate about building efficient, real-world systems using
+                  REST APIs and RPC with modern web & AI technologies
+                </li>
+                <li>
+                  Strong grasp of system design principles and performance
+                  optimization
+                </li>
+                <li>
+                  Experience working across the stack with a focus on clean,
+                  maintainable code
+                </li>
+                <li>
+                  Actively exploring advancements in Generative AI, including
+                  tools like LangChain and LangGraph.
+                </li>
+              </ul>
               <div className="mt-8 flex flex-wrap gap-3">
                 <span className="bg-primary/10 text-primary text-xs font-medium px-4 py-1.5 rounded-full border border-primary/20">
                   Open for Work

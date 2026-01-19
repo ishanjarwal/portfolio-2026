@@ -71,7 +71,7 @@ export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
   return (
     <AnimatePresence mode="wait">
       {isOpen && (
-        <div className="fixed inset-0 z-100 md:hidden">
+        <div className="fixed inset-0 z-9999 md:hidden">
           {/* Backdrop */}
           <motion.div
             key="backdrop"

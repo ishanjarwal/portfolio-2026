@@ -2,14 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  MoveRight,
-  Phone,
-} from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, MoveRight, Phone } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -41,7 +34,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden not-sm:p-4"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden not-sm:p-4 not-sm:pt-10"
     >
       {/* Content */}
       <motion.div

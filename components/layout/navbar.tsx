@@ -29,12 +29,12 @@ export function Navbar() {
       <div className="fixed top-4 left-0 right-0 z-50 flex justify-center py-2 sm:px-2 not-sm:px-4">
         <nav
           className={cn(
-            "group flex items-center justify-between gap-8 rounded-full  p-2 ps-6 transition-all md:w-fit w-full",
+            "group flex items-center justify-between gap-8 rounded-full  p-4 ps-6 transition-all md:w-fit w-full",
             GLASS_EFFECTS,
           )}
         >
           <div className="">
-            <span className="font-heading font-bold text-lg pl-2">
+            <span className="font-heading font-bold md:text-lg text-md pl-2">
               Ishan Jarwal
             </span>
           </div>
@@ -60,7 +60,7 @@ export function Navbar() {
               asChild
             >
               <Link
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1zIEmKAidyXH4XyLrGuMI0cb2sRCACF8a/view"
                 target="_blank"
                 rel="noopener noreferrer"
               >
