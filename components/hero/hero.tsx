@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Github,
   Linkedin,
@@ -43,13 +44,21 @@ const Hero = () => {
       className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden not-sm:p-4"
     >
       {/* Content */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
+        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className={cn(
           "z-10 flex flex-col items-center gap-6 text-center p-8 rounded-xl max-w-4xl w-full mt-16",
           GLASS_EFFECTS,
         )}
       >
-        <div className="w-24 aspect-square">
+        <motion.div
+          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ delay: 0.2 }}
+          className="w-24 aspect-square"
+        >
           <Image
             src={profile_image}
             height={200}
@@ -57,11 +66,21 @@ const Hero = () => {
             className="rounded-full overflow-hidden object-cover object-center shadow-2xl"
             alt={"Ishan Jarwal"}
           />
-        </div>
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/70 leading-normal">
+        </motion.div>
+        <motion.h1
+          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ delay: 0.3 }}
+          className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/70 leading-normal"
+        >
           Ishan Jarwal
-        </h1>
-        <div className="flex justify-center items-center gap-1 flex-wrap">
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ delay: 0.4 }}
+          className="flex justify-center items-center gap-1 flex-wrap"
+        >
           <Badge variant={"default"} className="p-1 px-2 bg-background/25">
             <MapPin />
             Jaipur, India
@@ -86,16 +105,26 @@ const Hero = () => {
               +91 9116080979
             </Link>
           </Badge>
-        </div>
-        <p className="max-w-2xl px-4 font-sans text-foreground text-sm md:text-lg ">
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ delay: 0.5 }}
+          className="max-w-2xl px-4 font-sans text-foreground text-sm md:text-lg "
+        >
           Hi, I’m Ishan, a passionate <b>Software Developer</b> based in Jaipur
           with experience in building <b>user centric</b>, <b>dynamic</b> and{" "}
           <b>AI first</b> web applications. I specialize in TypeScript, ReactJS,
           NextJS, NodeJS, ExpressJS (see my projects), and have a keen interest
           in modern web technologies and Generative AI.
-        </p>
+        </motion.p>
 
-        <div className="mt-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ delay: 0.6 }}
+          className="mt-4"
+        >
           <Button
             asChild
             variant="outline"
@@ -112,11 +141,16 @@ const Hero = () => {
               </span>
             </Link>
           </Button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Social Links Sidebar */}
-      <div className="absolute bottom-12 left-8 md:left-12 z-20 hidden md:flex flex-col gap-6">
+      <motion.div
+        initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
+        animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="absolute bottom-12 left-8 md:left-12 z-20 hidden md:flex flex-col gap-6"
+      >
         <div className="h-24 w-px bg-border mx-auto mb-2" />
         {socialLinks.map((social) => (
           <Link
@@ -130,7 +164,7 @@ const Hero = () => {
             <social.icon className="h-6 w-6" />
           </Link>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -106,8 +106,8 @@ const Contact = () => {
         {/* Heading Pattern */}
         <div className="text-center space-y-4">
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
             className="relative flex items-center justify-center"
           >
@@ -119,8 +119,8 @@ const Contact = () => {
             </span>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9, filter: "blur(5px)" }}
+            whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             className="h-1.5 w-24 bg-primary mx-auto rounded-full"
           />
@@ -186,8 +186,8 @@ const Contact = () => {
           {/* Right Side: Contact Form */}
           <div id="contact" className="lg:col-span-7">
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 20, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
               className={cn("p-8 md:p-10 rounded-3xl space-y-8", GLASS_EFFECTS)}
             >
