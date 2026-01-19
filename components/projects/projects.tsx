@@ -45,7 +45,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
                 </span>
               </Badge>
               {project.type.map((type) => (
-                <div key={type} className="md:hidden px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100 w-fit">
+                <div
+                  key={type}
+                  className="md:hidden px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100 w-fit"
+                >
                   {type}
                 </div>
               ))}
@@ -54,7 +57,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         </div>
         <div className="not-md:hidden flex flex-wrap justify-end items-center gap-1">
           {project.type.map((type) => (
-            <div key={type} className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100">
+            <div
+              key={type}
+              className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase font-bold tracking-widest whitespace-nowrap hover:bg-primary/25 duration-100"
+            >
               {type}
             </div>
           ))}
@@ -163,7 +169,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="relative flex items-center justify-center"
           >
-            <h2 className="text-6xl md:text-8xl font-extrabold bg-clip-text text-transparent bg-linear-to-b from-foreground/50 to-transparent select-none ">
+            <h2 className="text-5xl md:text-8xl font-extrabold bg-clip-text text-transparent bg-linear-to-b from-foreground/50 to-transparent select-none ">
               PROJECTS
             </h2>
             <span className="absolute text-3xl md:text-4xl font-bold text-foreground tracking-tight text-shadow-md">
