@@ -204,6 +204,7 @@ const About = () => {
               <div className="grid grid-cols-2 w-full md:gap-4 gap-1">
                 {socialLinks.map((link) => (
                   <Link
+                    key={link.name}
                     target="_blank"
                     href={link.link}
                     className={cn(

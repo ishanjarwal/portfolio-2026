@@ -1,5 +1,6 @@
 import Hero from "@/components/hero/hero";
 import About from "@/components/about/about";
+import Projects from "@/components/projects/projects";
 
 const BACKGROUND_VIDEO_URL =
   "https://res.cloudinary.com/dsf4t9wmc/video/upload/v1768741372/abstract_ball_rsgxrd.mp4";
@@ -25,6 +26,7 @@ export default function Home() {
 
       <Hero />
       <About />
+      <Projects />
     </main>
   );
 }
