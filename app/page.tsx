@@ -3,6 +3,7 @@ import About from "@/components/about/about";
 // import Experience from "@/components/experience/experience";
 import Projects from "@/components/projects/projects";
 import Contact from "@/components/contact/contact";
+import Experience from "@/components/experience/experience";
 
 const BACKGROUND_VIDEO_URL =
   "https://res.cloudinary.com/dsf4t9wmc/video/upload/v1768741372/abstract_ball_rsgxrd.mp4";
