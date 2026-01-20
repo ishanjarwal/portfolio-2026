@@ -127,7 +127,7 @@ const Hero = () => {
               GLASS_EFFECTS,
             )}
           >
-            <Link href="#contact">
+            <Link href="/#contact">
               Get in Touch
               <span className="absolute opacity-0  right-0 -translate-x-6 group-hover:opacity-100 group-hover:-translate-x-4 duration-200">
                 <MoveRight />

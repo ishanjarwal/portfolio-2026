@@ -12,6 +12,7 @@ interface BentoCardProps {
   className?: string;
   children?: React.ReactNode;
   icon?: React.ReactNode;
+  id?: string;
 }
 
 const BentoCard = ({
@@ -20,9 +21,11 @@ const BentoCard = ({
   className,
   children,
   icon,
+  id,
 }: BentoCardProps) => {
   return (
     <motion.div
+      id={id}
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -135,6 +138,7 @@ const About = () => {
           {/* Education Card */}
           <BentoCard
             title="Education"
+            id="education"
             className="md:col-span-2 md:row-span-1"
             icon={<GraduationCap className="w-6 h-6" />}
           >
@@ -217,7 +221,7 @@ const About = () => {
                   </Link>
                 ))}
                 <Link
-                  href={"#contact"}
+                  href={"/#contact"}
                   className={cn(
                     "flex col-span-2 justify-center items-center gap-2 p-4 rounded-[12px] hover:bg-foreground/10 hover:text-primary duration-150",
                     GLASS_EFFECTS,
