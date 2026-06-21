@@ -60,7 +60,7 @@ export function Navbar() {
               asChild
             >
               <Link
-                href="https://drive.google.com/file/d/1zIEmKAidyXH4XyLrGuMI0cb2sRCACF8a/view"
+                href="https://drive.google.com/file/d/1WvknaTaIKPzMgAc62XzXCrW5zbTMhctt/view"
                 target="_blank"
                 rel="noopener noreferrer"
               >
