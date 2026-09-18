@@ -12,23 +12,24 @@ import { Badge } from "../ui/badge";
 const socialLinks = [
   {
     icon: Linkedin,
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://linkedin.com/in/ishanjarwal",
     label: "LinkedIn",
   },
   {
     icon: Github,
-    href: "https://github.com/yourusername",
+    href: "https://github.com/ishanjarwal",
     label: "GitHub",
   },
   {
     icon: Mail,
-    href: "mailto:your.email@example.com",
+    href: "mailto:ishucodes@gmail.com",
     label: "Email",
   },
 ];
 
 const profile_image =
-  "https://res.cloudinary.com/dsf4t9wmc/image/upload/v1768759954/ishan_jarwal_g1ioz5.jpg";
+  // "https://res.cloudinary.com/dsf4t9wmc/image/upload/v1768759954/ishan_jarwal_g1ioz5.jpg";
+  "https://res.cloudinary.com/dsf4t9wmc/image/upload/v1789743949/1788199574935_enhkt2.jpg";
 
 const Hero = () => {
   return (
